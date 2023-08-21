@@ -7,7 +7,7 @@ Clustering, a type of unsupervised learning, is used to capture the structure, g
 
 The dataset contains 1125 rows and 3 columns: 'Field', 'x', and 'y'. Each row represents a data point, and the columns represent the index and x-y coordinate locations of each data point, respectively. The first ten columns of the dataset and a scatterplot of the data are shown below
 
-<center>
+<div align="center">
 
 |FIELD1|x                  |y                   |
 |------|-------------------|--------------------|
@@ -22,7 +22,7 @@ The dataset contains 1125 rows and 3 columns: 'Field', 'x', and 'y'. Each row re
 |9     |1.22096595587209   |2.0513566522859     |
 |10    |-2.30543425306678  |1.45974390394986    |
 
-</center>
+</div>
 
 ![](images/1.png)
 
