@@ -47,26 +47,11 @@ $\sum_{k}\sum_{i\in  C_{k}}\left|\left|x_i-\mu _k \right| \right|^2$
 
 
 
-
-<div align="center">
-sdvfv
 ![](images/2.png)
-</div>
 
-
-<div align="center">
-dfvdfv
 ![](images/3.png)
-</div>
 
-
-<div align="center">
-dfvdv
 ![](images/4.png)
-</div>
 
-
-<div align="center">
-dvfdv
 ![](images/5.png)
-</div>
+
