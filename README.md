@@ -37,5 +37,32 @@ Given *n* data points, the objective is to divide them into *K* groups such that
 
 But how do we define similarity? K-means uses the Euclidean distance between two points as the default distance metric for clustering. 
 
-The **K-means loss** is given by: \
+\
+
+We are given a training set $\{(x,y)^{(1)},(x,y)^{(2)},\dots,(x,y)^{(m)}\}$ where $(x,y)^{(i)}\in \mathbb{R}^n$. These are the training samples. The output should be a vector **c** of cluster assignment for each sample and K mean vectors $\mu$.
+
+The **K-means loss function** is given by: \
 $\sum_{k}\sum_{i\in  C_{k}}\left|\left|x_i-\mu _k \right| \right|^2$
+
+
+
+
+
+<div align="center">
+![](images/2.png)
+</div>
+
+
+<div align="center">
+![](images/3.png)
+</div>
+
+
+<div align="center">
+![](images/4.png)
+</div>
+
+
+<div align="center">
+![](images/5.png)
+</div>
