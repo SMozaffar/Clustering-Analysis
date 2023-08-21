@@ -22,8 +22,7 @@ The dataset contains 1125 rows and 3 columns: 'Field', 'x', and 'y'. Each row re
 |9     |1.22096595587209   |2.0513566522859     |
 |10    |-2.30543425306678  |1.45974390394986    |
 
-
+</center>
 
 ![](images/1.png)
 
-</center>
