@@ -26,7 +26,7 @@ The dataset contains 1125 rows and 3 columns: 'Field', 'x', and 'y'. Each row re
 
 ![](images/1.png)
 
-</ div>
+</div>
 
 
 ### K-means Clustering
