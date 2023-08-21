@@ -22,7 +22,20 @@ The dataset contains 1125 rows and 3 columns: 'Field', 'x', and 'y'. Each row re
 |9     |1.22096595587209   |2.0513566522859     |
 |10    |-2.30543425306678  |1.45974390394986    |
 
-</div>
+
 
 ![](images/1.png)
 
+</ div>
+
+
+### K-means Clustering
+
+Given *n* data points, the objective is to divide them into *K* groups such that:
+    - data points in a group are very similar to eachother
+    - data points in two different groups are less similar
+
+But how do we define similarity? K-means uses the Euclidean distance between two points as the default distance metric for clustering. 
+
+The **K-means loss** is given by:
+$ \sum_{k}\sum_{i\in  C_{k}}\left|\left|x_i-\mu _k \right| \right|^2$
