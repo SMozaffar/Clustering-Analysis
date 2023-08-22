@@ -60,7 +60,7 @@ Another popular technique used for partitioning data into clusters based on thei
 
 The formal algorithm is as follows:
 
-Given a set of points $S = \left\{s_1, ... s_n\right\}$ in $\mathbb{R}^l$ that we want to cluster into *k* subsets
+Given a set of points $S = \left{s_1, ... s_n\right}$ in $\mathbb{R}^l$ that we want to cluster into *k* subsets
 
 1. Form the affinity matrix $A \in \mathbb{R}^{n*n}$ defined by $A_{ij} =  exp(-\left|\left| s_i - s_j\right|\right|^2/2\sigma^2)$ if $i \neq j$ and $A_{ii} = 0$. 
 
