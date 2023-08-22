@@ -62,7 +62,7 @@ The formal algorithm is as follows:
 
 Given a set of points $S = \left( s_1, ... s_n \right)$ in $\mathbb{R}^l$ that we want to cluster into *k* subsets
 
-1. Form the affinity matrix $A \in \mathbb{R}^{n*n}$ defined by **$A_{ij} =  exp(-\left|\left| s_i - s_j\right|\right|^2/2\sigma^2)$** if $i \neq j$ and $A_{ii} = 0$. 
+1. Form the affinity matrix $A \in \mathbb{R}^{n*n}$ defined by $A_{ij} =  exp(-\left|\left| s_i - s_j\right|\right|^2/2\sigma^2)$ if $i \neq j$ and $A_{ii} = 0$. 
 
 2. Define *D* to be the diagonal matrix whose (i, i)-element is the sum of A's i-th row, and construct the Laplacian matrix $L = D^{-1/2}AD^{-1/2}$.
 
@@ -72,5 +72,8 @@ Given a set of points $S = \left( s_1, ... s_n \right)$ in $\mathbb{R}^l$ that w
 
 5. Treating each row of *Y* as a point in *K* dimensions $\left ( \mathbb{R}^k \right )$, cluster them into *k* clusters via K-means.
 
+<div align="center">
+
 ![](images/5.png)
 
+</div>
