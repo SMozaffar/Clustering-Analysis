@@ -72,8 +72,8 @@ Given a set of points $S = \left( s_1, ... s_n \right)$ in $\mathbb{R}^l$ that w
 
 5. Treating each row of *Y* as a point in *K* dimensions $\left ( \mathbb{R}^k \right )$, cluster them into *k* clusters via K-means.
 
-<div align="center">
+<p align="center">
 
 ![](images/5.png)
 
-</div>
+</p>
