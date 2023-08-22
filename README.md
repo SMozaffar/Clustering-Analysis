@@ -53,5 +53,24 @@ $$\sum_{k}\sum_{i\in  C_{k}}\left|\left|x_i-\mu _k \right| \right|^2$$
 
 ![](images/4.png)
 
+
+### Spectral Clustering
+
+Another popular technique used for partitioning data into clusters based on their underlying structure is **Spectral Clustering**. It's particularly effective for handling datasets where the data points are not easily separable in the original feature space but might exhibit clear patterns or clusters when analyzed in a different space. The data is transformed into a new representation using  eigenvectors of a **Similarity** or **Affinity** matrix derived from the distance between points, and then a standard clustering algorithm like K-means is applied to the reduced-dimensional data to partition it into clusters.
+
+The formal algorithm is as follows:
+
+Given a set of points $S = \left\{s_1, ... s_n\right\}$ in $\mathbb{R}^l$ that we want to cluster into *k* subsets
+
+1. Form the affinity matrix $A \in \mathbb{R}^{n*n}$ defined by $A_{ij} =  exp(-\left|\left| s_i - s_j\right|\right|^2/2\sigma^2)$ if $i \neq j$ and $A_{ii} = 0$. 
+
+2. Define *D* to be the diagonal matrix whose (i, i)-element is the sum of A's i-th row, and construct the Laplacian matrix $L = D^{-1/2}AD^{-1/2}$.
+
+3. Find $x_1, x_2, ... x_k$, the largest *k* eigenvectors of *L* and form the matrix $X = \left [x_1, x_2, ... x_k  \right ] \in \mathbb{R}^{n*k}$ by stacking the eigenvectors in columns.
+
+4. Form the matrix *Y* from *X* by renormalizing each of *X*'s rows to have unit length (length 1). 
+
+5. Treating each row of *Y* as a point in *K* dimensions $\left ( \mathbb{R}^k \right )$, cluster them into *k* clusters via K-means.
+
 ![](images/5.png)
 
