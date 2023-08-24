@@ -47,11 +47,11 @@ $$\sum_{k}\sum_{i\in  C_{k}}\left|\left|x_i-\mu _k \right| \right|^2$$
 
 
 
-![](images/2.png)
-
-![](images/3.png)
-
-![](images/4.png)
+<p align="center">
+  <img src="https://github.com/SMozaffar/Clustering-Analysis/blob/main/images/2.png" />
+  <img src="https://github.com/SMozaffar/Clustering-Analysis/blob/main/images/3.png" />
+  <img src="https://github.com/SMozaffar/Clustering-Analysis/blob/main/images/4.png" />
+</p>
 
 
 ### Spectral Clustering
