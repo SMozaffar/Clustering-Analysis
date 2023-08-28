@@ -44,21 +44,34 @@ We are given a training set $\{(x,y)^{(1)},(x,y)^{(2)},\dots,(x,y)^{(m)}\}$ wher
 The **K-means loss function** is given by: \
 $$\sum_{k}\sum_{i\in  C_{k}}\left|\left|x_i-\mu _k \right| \right|^2$$
 
-We can see that this is a non-convex function, which means that we cannot find the global optimal $\mu$ and **c**. The algorithm will converge to a local optima. In order to optimize, we use the **Coordinate Descent Algorithm**. The loss function is: \
+We can see that this is a non-convex function, which means that we cannot find the global optimal $\mu$ and **c**. The algorithm will converge to a local optima. In order to optimize, we use the **Coordinate Descent Algorithm**. The loss function is: 
 
 $$\mathcal{L} = \sum\limits_{i=1}^m\sum\limits_{k=1}^K \mathbb{1}\{c_i=k\} \lvert\lvert x_i-\mu_k\rvert\rvert^2$$
 
 Although we cannot find the best $\mu$ and **c** simultaneously, we can:
 
-(1) fix $\mu$, we find the best c exactly.
+(1) find the best **c** given a fixed $\mu$.
 
-(2) fix c, we find the best $\mu$ exactly. 
+(2) find the best $\mu$ given a fixed **c**. 
 
 **For updating c:** \
 $$c^i = \arg\min_j\lvert\lvert x^i - \mu_j\rvert\rvert^2$$
 
 **For updating $\mu$:**\
 $$\mu_k = \frac{1}{n_k} \sum\limits_{i=1}^m x_i\mathbb{1}[c_i=k]$$
+
+The formal algorithm is as follows:
+
+Given a set of points $S = \left( s_1, ... s_n \right)$ in $\mathbb{R}^l$ that we want to cluster into *k* subsets
+
+1. Initialize **cluster centroids** $\mu_1,\mu_2,\dots,\mu_k\in \mathbb{R}^n$ randomly.
+
+2. For each i, set $c^i = \arg\min_j\lvert\lvert x^i - \mu_j\rvert\rvert^2$.
+
+3. For each j, set $\mu_j = \frac{\sum_{i=1}^m\mathbb{1}[c^i=j]x^i}{\sum_{i=1}^m\mathbb{1}[c^i=j]}$.
+
+4. Repeat steps 2 and 3 until convergence.
+
 
 
 
