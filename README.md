@@ -44,6 +44,21 @@ We are given a training set $\{(x,y)^{(1)},(x,y)^{(2)},\dots,(x,y)^{(m)}\}$ wher
 The **K-means loss function** is given by: \
 $$\sum_{k}\sum_{i\in  C_{k}}\left|\left|x_i-\mu _k \right| \right|^2$$
 
+We can see that this is a non-convex function, which means that we cannot find the global optimal $\mu$ and **c**. The algorithm will converge to a local optima. In order to optimize, we use the **Coordinate Descent Algorithm**. The loss function is: \
+
+$$\mathcal{L} = \sum\limits_{i=1}^m\sum\limits_{k=1}^K \mathbb{1}\{c_i=k\} \lvert\lvert x_i-\mu_k\rvert\rvert^2$$
+
+Although we cannot find the best $\mu$ and **c** simultaneously, we can:
+
+(1) fix $\mu$, we find the best c exactly.
+
+(2) fix c, we find the best $\mu$ exactly. 
+
+**For updating c:** \
+$$c^i = \arg\min_j\lvert\lvert x^i - \mu_j\rvert\rvert^2$$
+
+**For updating $\mu$:**\
+$$\mu_k = \frac{1}{n_k} \sum\limits_{i=1}^m x_i\mathbb{1}[c_i=k]$$
 
 
 
