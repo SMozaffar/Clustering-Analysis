@@ -70,6 +70,9 @@ Given a set of points $S = \left( s_1, ... s_n \right)$ in $\mathbb{R}^l$ that w
 4. Repeat steps 2 and 3 until convergence.
 
 
+The following plots show the data clustered using the K-means function from [sklearn.cluster](https://scikit-learn.org/stable/modules/clustering.html) on Python.
+
+
 
 
 <p align="center">
